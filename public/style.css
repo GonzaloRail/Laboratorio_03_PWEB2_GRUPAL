@@ -26,12 +26,12 @@ form{
 }
 
 #caja{
-    background-color:  #0990abcc;
+    background-color:#0990ab72;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border: 3px solid rgb(255, 255, 255);
+    border: 5px solid #0c5f7e;
     border-radius: 15px;
 }
 
@@ -53,7 +53,7 @@ input#titulo:focus {
 }
 
 h1 span.bl{
-    font-size: 60px;
+    font-size: 50px;
     color: #0e3d5b;
     font-weight: bold;
     text-decoration: underline;
@@ -83,12 +83,12 @@ textarea#contenido::placeholder {
 }
 
 div#btns {
-    width: 400px;
+    width: 450px;
     height: 50px;
-    margin-left: -8px;
+    padding: 0px;
     background-color: transparent;
     display: flex; 
-    justify-content: space-between;
+    justify-content: space-evenly;
 
 }
 input[type="button"]{
@@ -102,13 +102,13 @@ input[type="button"]{
 
 input#bSubmit1 {
     background-color: #0c5f7e;
-    border: 3px solid rgb(255, 255, 255);
+    border: 0px solid rgb(255, 255, 255);
     border-radius: 5px;
 }
 
 input#bSubmit2 {
     background-color: #0c5f7e;
-    border: 3px solid rgb(255, 255, 255);
+    border: 0px solid rgb(255, 255, 255);
     border-radius: 5px;
 }
 
@@ -131,17 +131,7 @@ input#bSubmit2:hover{
     padding: 10px 0px;
     border-bottom: solid 1px #ccc;
 }
-#bSubmit1{
-    margin-left: 45px;
-    background: rgb(36, 35, 46);
-    font-size: 17px;
-}
-#bSubmit2{
-    margin-left: 10px;
-    background: rgb(36, 35, 46);
-    font-size: 17px;
 
-}
 .cajaNombre{
     background: rgb(36, 35, 46);
     color:white;
@@ -154,7 +144,7 @@ input#bSubmit2:hover{
 
 }
 #lista{
-    background-color: rgb(30, 29, 43);
+    background-color: transparent;
     width: 300px;
     color: white;
     font-size: 30px;
@@ -168,12 +158,14 @@ input#bSubmit2:hover{
     align-items: center;
 }
 
-.cajitaLista #lista span:hover{
+.cajitaLista #lista span{
+    font-weight: bolder;
+    color: #0c5f7e;
     transition: color 0.3s ease-in-out;
 }
 
 .cajitaLista #lista span:hover{
-    color: #03b5bbcd;
+    color: white;
     cursor: pointer;
 }
 
@@ -192,11 +184,4 @@ input#bSubmit2:hover{
     font-weight: bold;
     color: white;
 }
-
-hr#lin {
-    background-color: white;
-    height: 3px;
-    width: 95%;
-}
-
 

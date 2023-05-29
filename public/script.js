@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
             bSubmit1.addEventListener('click', () =>{
 
-                redirigirSeccion("final"); // me redirige a la seccion myList
-
                 //validar campos
                 const titulo = document.querySelector('#titulo').value;
                 const contenido = document.querySelector('#contenido').value;
@@ -17,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     alert("Su documento no posee título !!!");
                 }
                 else {
+
+                    redirigirSeccion("final"); // me redirige a la seccion final
+
                     //Se elimina el texto escrito en el input y textarea para crear un nuevo documento mas facilmente.
                     const tit=document.getElementById("titulo");    
                     const cont=document.getElementById("contenido");    
@@ -50,10 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const bSubmit2 = document.querySelector('#bSubmit2');
     
             bSubmit2.addEventListener('click',()=>{
-                redirigirSeccion("myList"); // me redirige a la seccion myList
+                redirigirSeccion("lin"); // me redirige a la seccion lin
                 loadDocumentos();
                 const actualixarNuevamenteStyle = document.getElementById('lista');
-                actualixarNuevamenteStyle.setAttribute("style", " align-items: center;width: 300px;background-color: rgb(30, 29, 43);");
+                actualixarNuevamenteStyle.setAttribute("style", " align-items: center;width: 300px;background-color: transparent;");
             });
     
             
@@ -66,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
                     data.documentos.forEach(documento => {
                         const element = document.createElement('div');
-                        element.innerHTML = `<span>${documento.titulo}</span>`;
+                        element.innerHTML = `<li><span>${documento.titulo}</span></li>`;
             
                         // Agregar evento de clic para llamar a la función mostrar
                         element.addEventListener('click', () => {
@@ -96,14 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log(html);
                     const resultadoElement = document.querySelector('#lista');
                     resultadoElement.innerHTML = html; // Actualiza el contenido del elemento con el HTML convertido
-                    resultadoElement.setAttribute("style", " align-items: first baseline;width: 100%;    background-color: rgb(7, 0, 112);");
+                    resultadoElement.setAttribute("style", " align-items: first baseline;width: 100%;    background-color: transparent;");
                 });
             }
-    
+
         });
 
         function redirigirSeccion(pam) {
             var seccionObjetivo = document.getElementById(pam);
             seccionObjetivo.scrollIntoView({ behavior: "smooth" });
-          }
-    
+        }
