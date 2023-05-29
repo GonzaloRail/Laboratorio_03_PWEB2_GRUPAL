@@ -9,8 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 //validar campos
                 const titulo = document.querySelector('#titulo').value;
                 const contenido = document.querySelector('#contenido').value;
+
+                //Se elimina el texto escrito en el input y textarea para crear un nuevo documento mas facilmente.
+                const tit=document.getElementById("titulo");    
+                const cont=document.getElementById("contenido");    
+
+                tit.value = "";
+                cont.value = "";
+
+
                 //Elimina espacios con el trim()
                 if(titulo.trim() === '' || contenido.trim() === '') return false;
+                // se actualiza los datos puestos en el input y textarea.
     
                 //mandar solicitud POST a /new
                 fetch('/new', {
@@ -20,8 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
                 .then(res => res.text())
                 .then(data =>{
-                    // mostrar mensaje de error/éxito
-                    alert(data);
+                    
     
                     //actualizar lista de peliculas
                     loadDocumentos();
@@ -31,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
                 
             });
+            
             const bSubmit2 = document.querySelector('#bSubmit2');
     
             bSubmit2.addEventListener('click',()=>{
