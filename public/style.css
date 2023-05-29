@@ -1,4 +1,5 @@
 body{
+    background: linear-gradient(to left, #36D1DC, #5B86E5);
     font-family: 'Times New Roman', Times, serif;
     padding: 0;
     margin: 0;
@@ -11,11 +12,11 @@ p{
 
 }
 .fondo{
-    background: rgb(36, 35, 46);
+    background: linear-gradient(to left, #36D1DC, #5B86E5);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     flex-direction: column;
     color: white;
 }
@@ -25,25 +26,105 @@ form{
 }
 
 #caja{
-    
-    background: rgb(30, 29, 43);
+    background-color:  #0990abcc;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 15px;
+}
 
+h1 p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input#titulo {
+    background-color: #0c5f7e;
+    transition: background-color 0.1s ease-in-out;
+}
+
+input::placeholder{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.632);
+}
+
+input#titulo:focus {
+    background-color: #03b5bbcd;
+}
+
+h1 span.bl{
+    font-size: 60px;
+    color: #0e3d5b;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 input[type="text"]{
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
     padding: 10px;
     width: 350px;
 }
 
+textarea#contenido {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    background-color: #0c5f7e;
+    transition: background-color 0.3s ease-in-out;
+}
+
+textarea#contenido:focus {
+    background-color: #03b5bbcd;
+}
+
+textarea#contenido::placeholder {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.632);
+}
+
+div#btns {
+    width: 400px;
+    height: 50px;
+    margin-left: -8px;
+    background-color: transparent;
+    display: flex; 
+    justify-content: space-between;
+
+}
 input[type="button"]{
     color: white;
-    background-color: rgba(18, 69, 163, 255);
+    font-weight: bold;
+    background-color: #0c5f7e;
     padding: 10px;
     border: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input#bSubmit1 {
+    background-color: #0c5f7e;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+input#bSubmit2 {
+    background-color: #0c5f7e;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+input#bSubmit1:hover{
+    cursor: pointer;
+    border-color: #0c5f7e;
+    background-color: rgb(255, 255, 255);
+    color: #0c5f7e;
+}
+
+input#bSubmit2:hover{
+    cursor: pointer;
+    border-color: #0c5f7e;
+    background-color: rgb(255, 255, 255);
+    color: #0c5f7e;
+
 }
 
 #lista div{
@@ -78,22 +159,44 @@ input[type="button"]{
     color: white;
     font-size: 30px;
     display: flex;
-    align-items: center;
+
     flex-direction: column;
     
 }
+
+.cajitaLista #lista {
+    align-items: center;
+}
+
+.cajitaLista #lista span:hover{
+    transition: color 0.3s ease-in-out;
+}
+
+.cajitaLista #lista span:hover{
+    color: #03b5bbcd;
+    cursor: pointer;
+}
+
 .cajitaLista{
     
-    background: rgb(36, 35, 46);
+    background: linear-gradient(to left, #36D1DC, #5B86E5);
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-
-
 }
 
+.cajitaLista p{
+    font-size: 65px;
+    font-weight: bold;
+    color: white;
+}
 
+hr#lin {
+    background-color: white;
+    height: 3px;
+    width: 95%;
+}
 
 

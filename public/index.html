@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="fondo">
         <div id="caja">
-            <h1>Registro</h1>
+            <h1>MARKDOWN<span class ="bl">.HTML</span></h1>
             <form action="/new" method="POST">
                 <p>
                     <label for="">Titulo </label><br/>
-                    <input class="cajaNombre" type="text" name="nombre" id="titulo" placeholder="Ingrese Titulo ">
+                    <input class="cajaNombre" type="text" name="nombre" id="titulo" placeholder="Ingrese su título ...">
                 </p>
                 <p>
                     <label for="">Contenido</label><br/>
-                    <textarea class="cajaContenido" id="contenido" name="textoM" style="width:360px; height:200px" placeholder="Ingrese texto Marckdown"></textarea>
-    
-                    
+                    <textarea class="cajaContenido" id="contenido" name="textoM" style="width:360px; height:200px" placeholder="Ingrese su texto Markdown ..."></textarea>  
                 </p>
-    
-                <input type="button" value="Registrar nuevo documento" id="bSubmit1">
-                <input type="button" value="Ver Listas" id="bSubmit2">
+                
+                <div id="btns">
+                    <input type="button" value="Crear MARKDOWN" id="bSubmit1">
+                    <input type="button" value="Mis listas" id="bSubmit2">
+                </div>
 
             </form>
            
@@ -35,12 +35,18 @@
 
         <script src="script.js"></script>
     </div>
-   
-    <div class="cajitaLista">
+    
+    <section id="myList">
+        <hr id="lin">
 
-        <div id="lista"></div>
-
-    </div>
-
+        <div class="cajitaLista">
+    
+            <p>Mis listas:</p>
+            <div id="lista"></div>
+    
+        </div>
+    </section>
+    
+    <section id="final"></section>
 </body>
 </html>

@@ -6,47 +6,54 @@ document.addEventListener('DOMContentLoaded', () => {
             loadDocumentos();
     
             bSubmit1.addEventListener('click', () =>{
+
+                redirigirSeccion("final"); // me redirige a la seccion myList
+
                 //validar campos
                 const titulo = document.querySelector('#titulo').value;
                 const contenido = document.querySelector('#contenido').value;
 
-                //Se elimina el texto escrito en el input y textarea para crear un nuevo documento mas facilmente.
-                const tit=document.getElementById("titulo");    
-                const cont=document.getElementById("contenido");    
+                if(titulo == "") {
+                    alert("Su documento no posee título !!!");
+                }
+                else {
+                    //Se elimina el texto escrito en el input y textarea para crear un nuevo documento mas facilmente.
+                    const tit=document.getElementById("titulo");    
+                    const cont=document.getElementById("contenido");    
 
-                tit.value = "";
-                cont.value = "";
+                    tit.value = "";
+                    cont.value = "";
 
 
-                //Elimina espacios con el trim()
-                if(titulo.trim() === '' || contenido.trim() === '') return false;
-                // se actualiza los datos puestos en el input y textarea.
-    
-                //mandar solicitud POST a /new
-                fetch('/new', {
-                    method: 'POST', 
-                    headers: {'Content-type': 'application/json'},
-                    body: JSON.stringify({titulo: titulo, contenido: contenido})
-                })
-                .then(res => res.text())
-                .then(data =>{
-                    
-    
+                    //Elimina espacios con el trim()
+                    if(titulo.trim() === '' || contenido.trim() === '') return false;
+                    // se actualiza los datos puestos en el input y textarea.
+        
+                    //mandar solicitud POST a /new
+                    fetch('/new', {
+                        method: 'POST', 
+                        headers: {'Content-type': 'application/json'},
+                        body: JSON.stringify({titulo: titulo, contenido: contenido})
+                    })
+                    .then(res => res.text())
+                    .then(data =>{
+                        
+        
                     //actualizar lista de peliculas
                     loadDocumentos();
-                });
-    
-                
-    
+                    });
+                    
+                }
                 
             });
             
             const bSubmit2 = document.querySelector('#bSubmit2');
     
             bSubmit2.addEventListener('click',()=>{
+                redirigirSeccion("myList"); // me redirige a la seccion myList
                 loadDocumentos();
                 const actualixarNuevamenteStyle = document.getElementById('lista');
-                actualixarNuevamenteStyle.style.width="300px"; 
+                actualixarNuevamenteStyle.setAttribute("style", " align-items: center;width: 300px;background-color: rgb(30, 29, 43);");
             });
     
             
@@ -59,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
                     data.documentos.forEach(documento => {
                         const element = document.createElement('div');
-                        element.textContent = documento.titulo;
+                        element.innerHTML = `<span>${documento.titulo}</span>`;
             
                         // Agregar evento de clic para llamar a la función mostrar
                         element.addEventListener('click', () => {
@@ -68,9 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             const divLista = document.getElementById('lista');
                             divLista.style.width="100%"; 
                             divLista.style.height="100%";
-    
-                           
-                        
                         });
             
                         documentos.appendChild(element);
@@ -92,8 +96,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log(html);
                     const resultadoElement = document.querySelector('#lista');
                     resultadoElement.innerHTML = html; // Actualiza el contenido del elemento con el HTML convertido
+                    resultadoElement.setAttribute("style", " align-items: first baseline;width: 100%;    background-color: rgb(7, 0, 112);");
                 });
             }
     
         });
+
+        function redirigirSeccion(pam) {
+            var seccionObjetivo = document.getElementById(pam);
+            seccionObjetivo.scrollIntoView({ behavior: "smooth" });
+          }
     
