@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="caja1">
+        <h1>Markdown to HTML Converter</h1>
+        <button id="createMdButton">Create MD</button>
+        <button id="showFilesButton">Show Files</button>
+        <form id="markupForm" style="display: none;">
+            <div id="inputFields">
+                <label for="markupText">Enter Markdown Text:</label><br>
+                <textarea id="markupText" rows="5" cols="50"></textarea><br>
+                <label for="fileName">File Name:</label>
+                <input type="text" id="fileName" name="fileName" required><br>
+                <input type="submit" value="Convert">
+            </div>
+        </form>
+        
+        <h2>HTML Output:</h2>
+        <div id="htmlCode"></div>
+    </div>
+    <div id="caja2" style="display: none;">
+        <h2>Files:</h2>
+        <div id="filesContainer"></div>
+    </div>
+</body>
+</html>
