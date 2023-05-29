@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="mystyle.css">
+		<script>
+			function recitar() {
+				const url = 'http://localhost:3000/recitar'
+				fetch(url).then(
+					response => response.json()
+				).then(
+					data => {
+						document.querySelector("#poema").innerHTML = data.text
+					}
+				)
+			}
+		</script>
+	</head>
+	<body>
+		<p id="welcome">Me gusta la programación.</p>
+		<p id="poema">Aquí se recibirá el poema.</p>
+		<script>recitar();</script>
+	</body>
+</html>
+
