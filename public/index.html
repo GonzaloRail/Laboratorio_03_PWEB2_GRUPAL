@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="fondo">
+        <div id="caja">
+            <h1>Registro</h1>
+            <form action="/new" method="POST">
+                <p>
+                    <label for="">Titulo </label><br/>
+                    <input class="cajaNombre" type="text" name="nombre" id="titulo" placeholder="Ingrese Titulo ">
+                </p>
+                <p>
+                    <label for="">Contenido</label><br/>
+                    <textarea class="cajaContenido" id="contenido" name="textoM" style="width:360px; height:200px" placeholder="Ingrese texto Marckdown"></textarea>
+    
+                    
+                </p>
+    
+                <input type="button" value="Registrar nuevo documento" id="bSubmit1">
+                <input type="button" value="Ver Listas" id="bSubmit2">
+
+            </form>
+           
+
+            
+        </div>
+
+
+        <script src="script.js"></script>
+    </div>
+   
+    <div class="cajitaLista">
+
+        <div id="lista"></div>
+
+    </div>
+
+</body>
+</html>
