@@ -79,6 +79,8 @@
 	
 **LINK REPOSITORIO: [https://github.com/GonzaloRail/Laboratorio_03_PWEB2_GRUPAL.git](https://github.com/GonzaloRail/Laboratorio_03_PWEB2_GRUPAL.git)**
 
+> ### *PUEDE REVISAR LAS RAMAS*
+
 Este sistema fue desarrollado usando estas tecnologías:
   
 -   HTML y CSS
@@ -169,7 +171,7 @@ Debería estar en la carpeta priv, tal como se le indica en la dirección que re
 -   **¿Entiende la expresión regular en el código y se da cuenta de para qué es útil?**
     
 
-Modifica el texto en formato HTML para que los saltos de línea representados por \n sean reemplazados por la etiqueta <br>, de manera que el contenido se visualice en el navegador de la misma forma que está en el archivo de texto original.
+Modifica el texto en formato HTML para que los saltos de línea representados por \n sean reemplazados por la etiqueta < br>, de manera que el contenido se visualice en el navegador de la misma forma que está en el archivo de texto original.
 
   
 
